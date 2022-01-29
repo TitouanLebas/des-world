@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <header>
+      <title>Dés World</title>
+    </header>
+  </head>
+  <body>
+    <h1><em>Dés World</em></h1>
+    <br />
+    <h3>Dés World est une application de test pour un futur projet (ce dernier est une application de football gratuite possédant de nombreuses fonctionalitées et totalement gratuite baptisée "Forgeau"). </h3><br />
+    <img src="de.jpeg" alt="Dés World"/>
+    <p>Dés World est une application gratuite de dés en ligne.</p>
+    <br />
+    <h2><em>Comment ça marche?</em></h2>
+    <br />
+    <p>Pour utiliser Dés World, il suffit de cliquer sur le bouton "Lancer le dé" ci-dessous et le dé est lancé!</p><br />
+
+    <form id="de">
+      <input type="button" onclick={choisir()} value="lancer le dé" />
+    </form>
+    <p id="output" />
+    <p>
+      <label for="score">Quel est ton score?</label>
+      <input type="text" name="score" id="score" maxlenght="1" placeholder="1/2/3/4/5/6" type="number" />
+    </p>
+  </body>
+  <script>
+  function choisir(){
+    document.getElementById('score').value = Math.ceil(Math.random()*6);
+  }
+  </script>
+</html>
